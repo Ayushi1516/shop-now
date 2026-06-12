@@ -1,0 +1,29 @@
+<div class="p-6">
+  <h2 class="text-2xl font-bold text-slate-800 mb-6">Available Products</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    @for (product of products(); track product.id) {
+      <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <!-- Display the first image from the array -->
+        <div class="h-48 bg-slate-100 relative">
+          <img 
+            [src]="product.images[0]" 
+            [alt]="product.name"
+            onerror="this.src='assets/products/placeholder.jpg'"
+            class="w-full h-full object-cover">
+          <span class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold">
+            ${{ product.price }}
+          </span>
+        </div>
+
+        <div class="p-4">
+          <h3 class="font-bold text-slate-900 text-lg">{{ product.name }}</h3>
+          <p class="text-slate-500 text-sm mt-1 line-clamp-2">{{ product.description }}</p>
+          <button class="w-full mt-4 py-2 bg-slate-900 text-white rounded-xl font-semibold hover:bg-slate-800 transition-colors">
+            View Details
+          </button>
+        </div>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,68 @@
+<div class="flex flex-col items-center justify-center min-h-screen bg-slate-100 text-white p-6 font-sans">
+  <div class="max-w-md w-full bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10 shadow-2xl">
+    
+    <h2 class="text-3xl font-bold text-center mb-6 text-slate-900">Create Account</h2>
+    <form [formGroup]="signupForm" (ngSubmit)="register()" class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium text-slate-900">Full Name</label>
+        <input type="text" formControlName="name" placeholder="John Doe" 
+          [class.border-red-500]="signupForm.get('name')?.invalid && signupForm.get('name')?.touched"
+          class="w-full mt-1 p-3 bg-slate-200 border border-slate-200 rounded-xl text-slate-900 focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+        @if (signupForm.get('name')?.invalid && signupForm.get('name')?.touched) {
+          <p class="text-red-500 text-xs mt-1">Full name is required.</p>
+        }
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-slate-900">Email Address</label>
+        <input type="email" formControlName="email" placeholder="you@example.com" 
+          [class.border-red-500]="signupForm.get('email')?.invalid && signupForm.get('email')?.touched"
+          class="w-full mt-1 p-3 bg-slate-200 border border-slate-200 rounded-xl text-slate-900 focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+        @if (signupForm.get('email')?.invalid && signupForm.get('email')?.touched) {
+          <div class="text-red-500 text-xs mt-1">
+            @if (signupForm.get('email')?.errors?.['required']) { <span>Email is required.</span> }
+            @if (signupForm.get('email')?.errors?.['email']) { <span>Invalid email format.</span> }
+          </div>
+        }
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-slate-900">Password</label>
+        <input type="password" formControlName="password" placeholder="••••••••" 
+          [class.border-red-500]="signupForm.get('password')?.invalid && signupForm.get('password')?.touched"
+          class="w-full mt-1 p-3 bg-slate-200 border border-slate-200 rounded-xl text-slate-900 focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+        @if (signupForm.get('password')?.invalid && signupForm.get('password')?.touched) {
+          <div class="text-red-500 text-xs mt-1">
+            @if (signupForm.get('password')?.errors?.['required']) { <span>Password is required.</span> }
+            @if (signupForm.get('password')?.errors?.['minlength']) { <span>Minimum 6 characters required.</span> }
+          </div>
+        }
+      </div>
+      <div>
+        <div class="flex items-center space-x-3 p-3 bg-slate-200 border border-slate-200 rounded-xl">
+          <input type="checkbox" formControlName="isRetailer" id="isRetailer" 
+            class="w-5 h-5 text-blue-600 bg-white border-slate-300 rounded focus:ring-blue-500 cursor-pointer">
+          <label for="isRetailer" class="text-sm font-medium text-slate-900 cursor-pointer select-none mx-2">
+            Register as a Retailer
+          </label>
+        </div>
+      </div>
+      <button 
+        type="submit" 
+        [disabled]="signupForm.invalid || isLoading()" 
+        class="w-full py-3 bg-blue-600 hover:bg-blue-700 disabled:opacity-50 rounded-xl font-bold transition-all transform hover:scale-[1.01] active:scale-95 shadow-lg shadow-blue-600/20 flex justify-center items-center gap-2">
+        @if (isLoading()) {
+          <span class="animate-pulse">Signing Up...</span>
+        } @else {
+          Sign Up
+        }
+      </button>
+    </form>
+    <p class="mt-6 text-center text-slate-400">
+      Already have an account? <a routerLink="/" class="text-blue-500 hover:underline">Sign in</a>
+    </p>
+    <div class="mt-8 pt-6 border-t border-slate-200/20 text-center">
+      <a routerLink="/" class="text-slate-500 text-xs tracking-widest uppercase font-semibold hover:text-blue-500 transition-colors cursor-pointer">
+        ShopNow
+      </a>
+    </div>
+  </div>
+</div>

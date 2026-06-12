@@ -1,0 +1,106 @@
+{
+  "users": [
+    {
+      "name": "Divyansh",
+      "email": "div@gmail.com",
+      "password": "123456",
+      "role": "RETAILOR",
+      "id": "sg2aK52S7gU"
+    }
+  ],
+  "scripts": [],
+  "products": [
+    {
+      "id": "prod_101",
+      "name": "Wireless Noise-Canceling Headphones",
+      "description": "Premium over-ear headphones with active noise cancellation and 30-hour battery life.",
+      "price": 299.99,
+      "images": [
+        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000",
+        "https://images.unsplash.com/photo-1484704849700-f032a568e944?q=80&w=1000"
+      ],
+      "retailerId": "sg2aK52S7gU"
+    },
+    {
+      "id": "prod_102",
+      "name": "Smartwatch Pro",
+      "description": "Advanced smartwatch with fitness tracking, heart rate monitor, and GPS.",
+      "price": 199.99,
+      "images": ["https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?q=80&w=1000"],
+      "retailerId": "sg2aK52S7gU"
+    },
+    {
+      "id": "prod_103",
+      "name": "Bluetooth Speaker",
+      "description": "Portable speaker with deep bass and 12-hour battery life.",
+      "price": 89.99,
+      "images": ["https://images.unsplash.com/photo-1585386959984-a4155224a1e1?q=80&w=1000"],
+      "retailerId": "sg2aK52S7gU"
+    },
+    {
+      "id": "prod_104",
+      "name": "Gaming Laptop",
+      "description": "High-performance laptop with RTX graphics and 16GB RAM.",
+      "price": 1499.99,
+      "images": ["https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1000"],
+      "retailerId": "sg2aK52S7gU"
+    },
+    {
+      "id": "prod_105",
+      "name": "Mechanical Keyboard",
+      "description": "RGB backlit mechanical keyboard with customizable keys.",
+      "price": 129.99,
+      "images": ["https://images.unsplash.com/photo-1587202372775-98905f6c9bda?q=80&w=1000"],
+      "retailerId": "sg2aK52S7gU"
+    },
+    {
+      "id": "prod_106",
+      "name": "4K Monitor",
+      "description": "Ultra HD 27-inch monitor with HDR support.",
+      "price": 399.99,
+      "images": ["https://images.unsplash.com/photo-1587202372775-98905f6c9bda?q=80&w=1000"],
+      "retailerId": "sg2aK52S7gU"
+    },
+    {
+      "id": "prod_107",
+      "name": "Wireless Mouse",
+      "description": "Ergonomic wireless mouse with adjustable DPI.",
+      "price": 49.99,
+      "images": ["https://images.unsplash.com/photo-1587202372775-98905f6c9bda?q=80&w=1000"],
+      "retailerId": "sg2aK52S7gU"
+    },
+    {
+      "id": "prod_108",
+      "name": "Smartphone XR",
+      "description": "Latest smartphone with OLED display and dual cameras.",
+      "price": 899.99,
+      "images": ["https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1000"],
+      "retailerId": "sg2aK52S7gU"
+    },
+    {
+      "id": "prod_109",
+      "name": "Tablet Plus",
+      "description": "10-inch tablet with stylus support and 128GB storage.",
+      "price": 499.99,
+      "images": ["https://images.unsplash.com/photo-1587202372775-98905f6c9bda?q=80&w=1000"],
+      "retailerId": "sg2aK52S7gU"
+    },
+    {
+      "id": "prod_110",
+      "name": "Fitness Tracker",
+      "description": "Lightweight tracker with sleep monitoring and step counter.",
+      "price": 79.99,
+      "images": ["https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?q=80&w=1000"],
+      "retailerId": "sg2aK52S7gU"
+    },
+    {
+      "id": "prod_111",
+      "name": "Drone Camera",
+      "description": "Quadcopter drone with 4K camera and 30-minute flight time.",
+      "price": 699.99,
+      "images": ["https://images.unsplash.com/photo-1508610048659-a06b669e0a7a?q=80&w=1000"],
+      "retailerId": "sg2aK52S7gU"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
