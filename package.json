@@ -8,7 +8,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:MerchantX": "node dist/MerchantX/server/server.mjs"
+    "serve:ssr:shop-now": "node dist/shop-now/server/server.mjs"
   },
   "private": true,
   "packageManager": "npm@11.12.1",

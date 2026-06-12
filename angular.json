@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "MerchantX": {
+    "shop-now": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -65,10 +65,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "MerchantX:build:production"
+              "buildTarget": "shop-now:build:production"
             },
             "development": {
-              "buildTarget": "MerchantX:build:development"
+              "buildTarget": "shop-now:build:development"
             }
           },
           "defaultConfiguration": "development"
